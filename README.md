@@ -1,5 +1,38 @@
 # My-Java-codes
 
+## USER INPUT NUMBERS, SUM BY USING METHODS
+```java
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    //call the method to get the user input
+    int number1 = userInput();
+    int number2 = userInput();
+    int result1 = number1 + number2;
+    System.out.println("The sum by simply number1+number2: " + result1);
+    
+    //or the same can be done with a method
+    int result2 = sum(number1, number2);
+    System.out.println("The sum by calling a method: " + result2);
+  }
+    
+  //Method where user inputs a number
+  public static int userInput() {
+    System.out.println("Enter a number: ");
+    Scanner scanner = new Scanner(System.in);
+    int numberEntered = scanner.nextInt();
+    return numberEntered;
+  }
+
+    // Method to calculate the sum of two numbers
+  public static int sum(int num1, int num2) {
+        return num1 + num2;
+  }
+
+}
+```
+
 ## RECTANGULAR
 ```java
 public class Main {
