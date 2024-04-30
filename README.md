@@ -1,5 +1,39 @@
 # My-Java-codes
 
+## CHECK IF THE LIST HAS A PARTICULAR NAME, METHOD - BOOLEAN
+```java
+ HelloWorld {
+    public static void main(String[] args) {
+        
+        // List of invited people
+        String[] peopleInvited = {"Oskars", "Anna", "Andris"};
+        
+        // name to check
+        String name = "Anna";
+        
+        // call a method to check whether the name is in the list
+        boolean isInvited = checkList(peopleInvited, name);
+        
+        // conditions whether a person is or is not invited
+        if (isInvited) {
+            System.out.println(name + " is invited to the party and is allowed to come!");
+        } else {
+            System.out.println(name + " is not invited to the party.");
+        }
+    }
+
+    // create a method which goes through the peopleInvited
+    public static boolean checkList(String[] peopleInvited, String name) {
+        for (int i = 0; i < peopleInvited.length; i++) {
+            if (peopleInvited[i].equals(name)) {
+                return true; // Name found in the list, return true
+            }
+        }
+        return false; // Name not found in the list, return false
+    }
+}
+```
+
 ## USER INPUT NUMBERS, SUM BY USING METHODS
 ```java
 import java.util.Scanner;
