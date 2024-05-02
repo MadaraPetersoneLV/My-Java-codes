@@ -1,5 +1,102 @@
 # My-Java-codes
 
+## COMPARE NUMBERS AND RETURN, WHICH IS HIGHER
+```java
+/* Create a function that returns smallest number of 2 numbers.
+
+For example:
+User provides 5
+User provides 7
+
+Function returns 5
+Main function prints out:
+5 is the smallest number
+*/
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int firstNumber = scanner.nextInt();
+        
+        System.out.print("Enter second number: ");
+        int secondNumber = scanner.nextInt();
+        
+        if (firstNumber == secondNumber) {
+            System.out.println("Numbers are equal.");
+        } else {int higherNumberIs = compareNumbers(firstNumber, secondNumber);
+        
+        System.out.println("Higher number is: " + higherNumberIs);}
+        
+       
+    }
+    
+    public static int compareNumbers(int a, int b) {
+        int smallerNumber;
+        if (a > b) {
+            smallerNumber = a;
+        }
+        else if (a < b) {
+            smallerNumber = b;
+        }
+        else {smallerNumber = a; }
+        return smallerNumber;
+    }
+}
+```
+
+# GUESS NUMBER. FIRST ATTEMPT, SOME DETAILS WERE CORRECTED BY AI
+```java
+import java.util.Scanner;
+
+class HelloWorld 
+{
+    public static void main(String[] args) 
+    {
+        // create random number
+        int numberInMyMind = 50;
+        
+        int number; // Declare number variable outside the loop
+        
+        // Loop until the guess is correct
+        while (true) 
+        {
+            // call a method guessNumber to be executed which asks user to input number
+            number = guessNumberMethod();
+            
+            ///////////// THE CONDITION depending on the guessed number ///////
+            if (number > numberInMyMind) 
+            {
+                System.out.println("Too high, guess again. "); 
+            } 
+            else if (number < numberInMyMind) 
+            {
+                System.out.println("Too low, guess again. ");
+            } 
+            // when correct - say it and break the loop 
+            else 
+            { 
+                System.out.println("Correct!"); 
+                break;
+            }
+        }
+    }
+    
+    ////////////////// GUESS NUMBER METHOD ///////////////////////
+    public static int guessNumberMethod() 
+    {
+        // create the option to ask for number and input it. Return a number.
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Guess number 0 - 100: ");
+        int number = scanner.nextInt();
+        return number;
+    }
+    //////////////////////////////////////////////////////////////
+}
+```
+
 ## CHECK IF THE LIST HAS A PARTICULAR NAME, METHOD - BOOLEAN
 ```java
  HelloWorld {
