@@ -1,5 +1,38 @@
 # My-Java-codes
 
+## ROCK, PAPER, SIZ - first functioning draft
+```java
+import java.util.Random;
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String me = runGameMethod();
+        System.out.println();
+        System.out.println("My choise: " + me);
+        
+        String computer = randomMethod();
+        System.out.println("Computer choise: " + computer);
+    }
+
+// create runGameMethod
+    public static String runGameMethod() {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("rock / paper / siz: ");
+    String me = scanner.next();
+    scanner.close();
+    return me;
+    }
+    
+    public static String randomMethod() {
+        String[] options = {"rock", "paper", "siz"};
+        int randomIndex = new Random().nextInt(options.length);
+        String choosenOption = options[randomIndex];
+        return choosenOption;
+    }
+}
+```
+
 ## COMPARE NUMBERS AND RETURN, WHICH IS HIGHER
 ```java
 /* Create a function that returns smallest number of 2 numbers.
