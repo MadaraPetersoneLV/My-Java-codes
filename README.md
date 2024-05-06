@@ -1,5 +1,52 @@
 # My-Java-codes
 
+## ROCK, PAPER, SIZ - second improved version
+```java
+import java.util.Random;
+import java.util.Scanner;
+
+class HelloWorld 
+{
+    public static void main(String[] args) {
+        System.out.println("ROCK, PAPER, SIZZORS game");
+        System.out.println();
+        // run the game by calling runGameMethod
+        runGameMethod();
+    }
+    
+    public static void runGameMethod() {
+        // my choise
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("rock / paper / siz: ");
+        String me = scanner.next();
+        System.out.println("Me: " + me);
+   
+        // computer`s choise
+        String[] options = {"rock", "paper", "siz"};
+        int randomIndex = new Random().nextInt(options.length);
+        String computer = options[randomIndex];
+        System.out.println("Computer: " + computer + "\n");
+        
+            //if equals - we play again
+            if (me.equals(computer)) {
+            System.out.println("EQUALS! Let`s play again!\n");
+            runGameMethod();
+            }
+            // I win condition
+            else if ((me.equals("rock") && computer.equals("siz")) || 
+                    (me.equals("paper") && computer.equals("rock")) || 
+                    (me.equals("siz") && computer.equals("paper"))) {
+                System.out.println("YOU WIN! :)\n");
+                
+            } else {
+                System.out.println("YOU LOOSE :(");
+            }
+
+
+    }
+}
+```
+
 ## ROCK, PAPER, SIZ - first functioning draft
 ```java
 import java.util.Random;
