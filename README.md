@@ -1,5 +1,88 @@
 # My-Java-codes
 
+##
+```java
+import java.util.Scanner;
+
+class hangmanGameCodeByMadara {
+    public static void main(String[] args) {
+        System.out.println("This is the HANGMAN GAME.\nYou will be given the amount of letters in the word indicated by underscores,\nfor example 3 underscores go for the word DOG = _ _ _.\nYou can guess 10 times. You can also try the whole word or syllables.\n");
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("When ready - press ENTER: "); scanner.nextLine();
+        System.out.println("\n");
+        
+        System.out.println("Guess the word. The amount of letters is: ");
+        
+        // Still need to create and call method giveMeAWord that gives a word from the list
+        String wordToGuess = "MAZNODUPIS";
+            for (int i = 0; i < wordToGuess.length(); i++) {
+            System.out.print("_ ");
+            }
+        System.out.println("\n");
+        
+        // USER GUESSES THE LETTER, SYSTEM COMPARES IT
+        for (int i = 0; i < 10; i++) {
+        System.out.print("Is this letter in the word: ");
+        String letterGuessed = scanner.next();
+        System.out.println(wordToGuess.contains(letterGuessed));
+            if (letterGuessed.equals(wordToGuess)) {
+                System.out.println("\nCorrect! The word is " + wordToGuess);
+                break;
+            }
+        }
+        System.out.println("\nYou didn`t make it, the word was " + wordToGuess + ".");
+    
+    }
+}
+```
+
+## ROCK, PAPER, SIZ - third version
+```java
+import java.util.Random;
+import java.util.Scanner;
+
+class RockPaperSizzors 
+{
+    public static void main(String[] args) {
+        System.out.println("ROCK, PAPER, SIZZORS game");
+        System.out.println();
+        // run the game by calling runGameMethod
+        runGameMethod();
+    }
+    
+    public static void runGameMethod() {
+        // my choise
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("rock / paper / siz:\nMe: ");
+        String me = scanner.next();
+   
+        // computer`s choise
+        String[] options = {"rock", "paper", "siz"};
+        int randomIndex = new Random().nextInt(options.length);
+        String computer = options[randomIndex];
+        System.out.println("Computer: " + computer);
+        
+            //if equals - we play again
+            if (me.equals(computer)) {
+            System.out.println("EQUALS! Again!\n");
+            runGameMethod();
+            }
+            // if I win - yey
+            else if ((me.equals("rock") && computer.equals("siz")) || 
+                    (me.equals("paper") && computer.equals("rock")) || 
+                    (me.equals("siz") && computer.equals("paper"))) {
+                System.out.println("YOU WIN! :)\n");
+            // if computer wins (else)
+            } else {
+                System.out.println("YOU LOOSE :(\n");
+            }
+        System.out.println("Want to play again? (press Enter)"); scanner.nextLine(); scanner.nextLine();
+        runGameMethod();
+    }
+}
+```
+
 ## ROCK, PAPER, SIZ - second improved version
 ```java
 import java.util.Random;
