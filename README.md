@@ -1,5 +1,26 @@
 # My-Java-codes
 
+## training for two dimensional arrays
+```java
+public class Main {
+    public static void main(String[] args){
+        int [][] gridTable = {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}
+        };
+        
+        for (int line = 0; line < gridTable.length; line++) {
+            int [] elements = gridTable[line];
+            for(int elementPosition = 0; elementPosition < elements.length; elementPosition++){
+                System.out.print(elements[elementPosition]);
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
 ##
 ```java
 import java.util.Scanner;
