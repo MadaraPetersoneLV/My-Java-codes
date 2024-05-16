@@ -2,6 +2,7 @@
 
 ## training primitive values - copies
 ```java
+// copy primitive values
 public class Main {
     public static void main(String[] args) {
         int a = 1;
@@ -20,20 +21,27 @@ public class Main {
         char h = g;
         System.out.println("g = " + g + "\nh = " + h + "\n");
         
+        String k = "words";
+        String l = k;
+        System.out.println("k = " + k + "\nl = " + l + "\n");
+        
         long m = -9_223_372_036_854_775_808L;
         long n = m;
         System.out.println("m = " + m + "\nn = " + n + "\n");
         
         boolean myNameIsMadara = true;
         boolean herNameIsMadara = myNameIsMadara;
-        System.out.println("Is my name Madara? -> " + myNameIsMadara + "\nIs her name Madara? -> " + herNameIsMadara + "\n");
+        System.out.println("Is my name Madara? -> " + myNameIsMadara);
+        System.out.println("Is her name Madara? -> " + herNameIsMadara + "\n");
         
         boolean iLikeLakrica = false;
         boolean youLikeLakrica = iLikeLakrica;
         youLikeLakrica = true;
-        System.out.println("Do I like Lakrica now? -> " + iLikeLakrica + "\nDo you like Lakrica now? -> " + youLikeLakrica);
+        System.out.println("Do I like Lakrica now because you like Lakrica? -> " + iLikeLakrica);
+        System.out.println("Do you like Lakrica now eventhough you did not like it before? -> " + youLikeLakrica);
     }
 }
+
 
 ```
 
