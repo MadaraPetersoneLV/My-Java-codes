@@ -1,5 +1,42 @@
 # My-Java-codes
 
+## training primitive values - copies
+```java
+public class Main {
+    public static void main(String[] args) {
+        int a = 1;
+        int b = a;
+        System.out.println("a = " + a + "\nb = " + b + "\n");
+        
+        float c = 2.5f;
+        float d = c;
+        System.out.println("c = " + c + "\nd = " + d + "\n");
+        
+        double e = 3.33;
+        double f = e;
+        System.out.println("e = " + e + "\nf = " + f + "\n");
+        
+        char g = '?';
+        char h = g;
+        System.out.println("g = " + g + "\nh = " + h + "\n");
+        
+        long m = -9_223_372_036_854_775_808L;
+        long n = m;
+        System.out.println("m = " + m + "\nn = " + n + "\n");
+        
+        boolean myNameIsMadara = true;
+        boolean herNameIsMadara = myNameIsMadara;
+        System.out.println("Is my name Madara? -> " + myNameIsMadara + "\nIs her name Madara? -> " + herNameIsMadara + "\n");
+        
+        boolean iLikeLakrica = false;
+        boolean youLikeLakrica = iLikeLakrica;
+        youLikeLakrica = true;
+        System.out.println("Do I like Lakrica now? -> " + iLikeLakrica + "\nDo you like Lakrica now? -> " + youLikeLakrica);
+    }
+}
+
+```
+
 ## training for two dimensional arrays
 ```java
 public class Main {
