@@ -106,7 +106,7 @@ public class Main {
 
 ```
 
-## training for two dimensional arrays
+## TWO dimensional array
 ```java
 public class Main {
     public static void main(String[] args){
@@ -122,6 +122,19 @@ public class Main {
                 System.out.print(elements[elementPosition]);
             }
             System.out.println();
+        }
+    }
+}
+```
+
+## ONE dimensional array
+```java
+public class Main {
+    public static void main(String[] args) {
+        
+        int[] oneDimensionalArray = {1, 2, 3};
+            for(int i = 0; i < oneDimensionalArray.length; i++){
+            System.out.print(oneDimensionalArray[i] + " ");
         }
     }
 }
